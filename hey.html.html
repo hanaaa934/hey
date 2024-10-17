@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say HEEY!</title>
+    <style>
+        /* Background styling with an online image */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://lh3.googleusercontent.com/p967fAW0LY695un5SI9dN2ucbN6W6SKNIKg12b84U14H0O-hWea8rhG4DWeDSuFmJq2hBUHu7HjZKbDx_2cdQU97FBU=s1280-w1280-h800');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        /* Container for the button and heading */
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Button styling */
+        button {
+            font-size: 1.5em;
+            padding: 15px 40px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            animation: bounceIn 2s ease;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-5px);
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); }
+            100% { transform: scale(1); }
+        }
+
+        /* Styling for the HEEY popup */
+        #heeyMessage {
+            display: none;8
+            font-size: 3em;
+            color: yellow;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+            animation: fadeInHeey 1s ease;
+        }
+
+        @keyframes fadeInHeey {
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <button onclick="sayHeey()">Click Me</button>
+        <!-- This will show the "HEEY!" message -->
+        <div id="heeyMessage">HEY Jackie! do u want some Codeine ?</div>
+    </div>
+
+    <script>
+        function sayHeey() {
+            // Display the hidden message and add animation
+            var heeyMessage = document.getElementById("heeyMessage");
+            heeyMessage.style.display = "block";
+            heeyMessage.style.animation = "fadeInHeey 1s ease";
+        }
+    </script>
+
+</body>
+</html>
